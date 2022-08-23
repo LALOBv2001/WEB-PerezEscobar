@@ -2,7 +2,7 @@
 ## Presentación 
 Alumno: Eduardo Pérez Escobar   
 Semestre: Septimo  
-Carrera: Ing. en Sistemas Computacionales 
+Carrera: Ing. en Sistemas Computacionales   
 Materia: Programación web
 ### HORARIO  
   
@@ -17,7 +17,7 @@ Materia: Programación web
 ## Pendientes   
 #### 1.  ~~Subir el archivo readme.~~
 #### 2.  ~~Entregar el link para revisión.~~
-#### 3.  ~~Hacer felíz a~~ mi ~~respectiva~~ dama <3
+#### 3.  ~~Hacer felíz a~~  mi ~~respectiva~~ dama <3
 #### 4.  Comprender HTML y CSS.
  
 
