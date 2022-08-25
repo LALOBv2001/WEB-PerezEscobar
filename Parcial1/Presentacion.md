@@ -1,4 +1,4 @@
-## Presentación    
+## EDUARDO PÉREZ ESCOBAR 
  **Incluir su historial académico**  
 Estuve en algunas escuelas, estas son algunas escuelas las cuales he cursado
 |Escuela|Periodo|Duración(años)
