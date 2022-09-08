@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        width:100%;
+        height:700px;
+    }
+    #papa
+    {
+        width:500px;
+        height:500px;
+        border: 1px green solid;
+    }
+    .div
+    {
+        border: 1px black solid;
+        width:auto;
+        height:auto;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        display: inline-block;
+    }
+    #t   {top: 0; left: 200px}
+    #botto{bottom: -450px; right: -150px;}
+    #left  {left: -90px; top: 250px;}
+    #right {right: -250px; bottom: -250px;}
+
+    #overflox
+    {
+        overflow:auto;
+        margin: 0 auto;
+        display:inline-block;
+        position: relative;
+        top: 150px;
+        left: 100px;
+    }
+    #z
+    {
+        position: relative;
+        z-index:-1;
+        display: inline-block;
+        top: 150px;
+        left: 150px;
+    }
+    .div:hover
+    {
+        color: #ffffff;
+        background-color: grey;
+    }
+  </style>
+<body>
+    <div id="papa">
+        <div class="div" id="t" onclick="document.getElementById('z').innerHTML='ARRIBA'">Arriba</div>
+        <div class="div" id="botto" onclick="document.getElementById('z').innerHTML='ABAJO'">Abajo</div>
+        <div class="div" id="left" onclick="document.getElementById('z').innerHTML='IZQUIERDA'">Izquierda</div>
+        <div class="div" id="right" onclick="document.getElementById('z').innerHTML='DERECHA'">Derecha</div>
+        <div class="div" id="overflox">Lorem, ipsum dolor...overflow</div>
+        <div class="div" id="z">Lorem, ipsum dolor.</div>
+    </div>
+</body>
+</html>

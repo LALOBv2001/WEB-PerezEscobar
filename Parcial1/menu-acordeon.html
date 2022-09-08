@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul
+    {
+        list-style:none;
+        width:600px;
+        height:500px;
+    }
+ 
+    ul>li>ul /*Inicialmente para esconder los submenus*/
+    {
+        display: none;
+        
+    }
+    ul>li:hover>ul /*Para que salten los submenus cada vez que seleccionamos un submenu*/
+    {
+        display:block;
+        height:100%;
+        
+    }
+    ul>li>ul>li:hover /*para mostrar el hover de un elemnto de la lista con color distinto*/
+    {
+        background-color: rgb(44, 226, 120);
+        color: white;
+    }
+    .opcion
+    {
+        background-color: rgb(8, 158, 45);
+        color: white;
+        padding: 2px;
+    }
+    a
+    {
+        color:white;
+        text-decoration:none;
+    }
+
+    .subOpcion
+    {
+        padding-left: 20px;
+        background:rgb(44, 117, 108);
+        color: white;
+    }
+
+   
+   
+</style>
+<body>
+    <br>
+    <h2>Bienvenido al tecnológico, puede consultar la información de la institución en el siguiente menu</h2>
+    <br><!--- Salto de linea--->
+    <ul>
+        <li id="opc1" class="opcion"><a href="#opc1">Carreras</a>
+            <ul>
+                <li class="subOpcion"><a href="">ing en Sistemas</a></li>
+                <li class="subOpcion"><a href="">ing Industrial</a></li>
+                <li class="subOpcion"><a href="">ing Gestión empresarial</a></li>
+            </ul>
+        </li>
+        <li id="opc2" class="opcion"><a href="#opc2">Documentos</a>
+            <ul>
+                <li class="subOpcion"><a href="">Solicitud</a></li>
+                <li class="subOpcion"><a href="">Prorroga</a></li>
+                <li class="subOpcion"><a href="">Ayuda</a></li>
+            </ul>
+        </li>
+        <li id="opc3" class="opcion"><a href="#opc3">Asesorias en</a>
+            <ul>
+                <li class="subOpcion"><a href="">Ingles</a></li>
+                <li class="subOpcion"><a href="">Frances</a></li>
+                <li class="subOpcion"><a href="">Programación</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+</body>
+</html>
