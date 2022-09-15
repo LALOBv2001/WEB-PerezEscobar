@@ -1,0 +1,64 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #ffffff 100%);
+}
+.link-modal
+{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.imagen-modal
+{
+    width: 90px;
+    height: 90px;
+}
+
+/*A ala caja dentro de la cual se posicionara el modal
+le damos un valor de z-index muy alto para que se coloque encima de todo lo demas.
+ inicialmente esta invisible con el valor de ppacidad a cero
+ y con la propiedad ppinter-events a none eviyamos que responda a los eventos del raton  */
+ 
+ .ventanaModal
+{
+    font-family:Arial, Helvetica, sans-serif;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:0;
+    background-color:silver;
+    z-index: 99999;
+    opacity:0;
+    pointer-events: none;
+}
+/* la caja que cotiene al modal solamente activa 
+ cuando tenga la pseudoclase :target*/
+ .ventanaModal:target
+ {
+    opacity:1;
+    pointer-events: auto;
+ }
+ /* Posicionamos la ventana modal <div> dentro
+  de la caja que la contiene .ventanaModal */
+ .ventanaModal > div
+ {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:white;
+ }
+
+ .botonCerrar:hover{background-color: blue; color: white;}

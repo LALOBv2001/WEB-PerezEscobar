@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+        box-sizing:border-box;
+        margin: 0;
+        padding:0;
+    }
+    .contenedor
+    {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-color:blue;
+        flex-direction: row;/*direccion que llevara las cajitas hijo dentro del padre*/
+        flex-wrap:wrap-reverse; /* establece si los elementos flexibles se
+         fuerzan en una línea o se pueden ajustar en varias líneas.
+         tiene los valores de:border:
+          no-wrap: que es para que no se fuerce en una linea, que si hay desborde no se vea, pero no queremos eso
+          wrap: que es para forzar a que si hay un cambio de ancho se ajuste el contenido a otra linea
+          wrap-reverse: que es lo mismo que la anterior, solo que se mira al reves.Ejemplo
+          1 2 3 4 5 6 pasa a -> 4 5 6  
+                                1 2 3 ;*/
+        justify-content:space-evenly;/*Justificar contenido:espaciado uniformemente */
+        align-items:center;
+    }
+    .caja
+    {
+        background-color:aqua;
+        color:blue;
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+        text-align:center;
+    }
+</style>
+<body>
+    <div class="contenedor">
+        <div id="caja1" class="caja">caja1</div>
+        <div id="caja2" class="caja">caja2</div>
+        <div id="caja3" class="caja">caja3</div>
+        <div id="caja4" class="caja">caja4</div>
+        <div id="caja5" class="caja">caja5</div>
+        <div id="caja6" class="caja">caja6</div>
+    </div>
+</body>
+</html>
