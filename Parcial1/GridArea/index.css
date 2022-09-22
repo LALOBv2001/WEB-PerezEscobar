@@ -1,0 +1,63 @@
+    *
+    {
+        box-sizing:border-box;
+        margin: 0;
+        padding:0;
+    }
+    .contenedor
+    {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas: "enca enca enca"
+                             "col1 col2 menu-lat"
+                             "pie pie menu-lat";
+        grid-template-columns: 10% 45% 45%;/*Medida y cantidad de columnas*/
+        grid-template-rows: 20% 60% 20%;/*medida y cantidad de renglones*/
+        background-color:blue;
+
+        justify-content:center;/*Justificamos la caja padre al centro*/
+        align-content: center;/*Alienamos el contenido del padre, no sus hijos*/
+
+        align-items: stretch; /*Alineacion de los items(hijos) de manera estrecha*/
+         justify-items: stretch;/*Justificamos los hijos de maera estrecha*/
+        grid-auto-flow:column;/* Hacia donde se van a ir haciendo las cajitas, como de tipo columna(de arriba a abajo) o de tipo row(izquierda a derecha) */
+    }
+    .caja
+    {
+        background-color:aqua;
+        color:blue;
+        /* margin: 10px;
+        height: 100px;
+        width: 100px; */
+        text-align:center;
+        border:2px solid black;
+    }
+    #encabezado
+    {
+        grid-area: enca;
+       background-color: rgb(232, 45, 45);
+    }
+    #menu-lateral{grid-area: menu-lat;}/*Les colocamos nombre de area para reconocerlo en el grid a cada objeto*/
+    #columna1{grid-area: col1;}
+    #columna2{grid-area: col2;}
+    #pie
+    {
+        grid-area: pie;
+     }
+    #caja2,#caja6,#caja8
+    {
+        background-color: violet;
+    }
+    @media screen and (max-width:500px) {
+        .contenedor
+        {
+            grid-template-areas:  "enca"
+                                  "menu-lat"
+                                  "col1"
+                                  "col2"
+                                  "pie";
+            grid-template-columns: 100%;/*Medida y cantidad de columnas*/
+            grid-template-rows: 20% 20% 20% 20% 20%;/*medida y cantidad de renglones*/
+        }
+    }
