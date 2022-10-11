@@ -51,7 +51,7 @@
         background-color: blue;
         padding: 1px 16px;
         height: 100%;
-        flex-grow: 4;
+        flex-grow: 4;/* Deja que crezca este elemento 4 veces mas que los demas elementos */
     }
   
     @media screen and (max-width:1200px){
@@ -79,9 +79,20 @@
     @media screen and(max-width:449px) {
         
     }
+
+    /*Le metemos un checkbox  */
+    input[type="checkbox"]{top: 0;left: 0;}
+    input[type="checkbox"]:checked + .sideBar{
+        /* width: 0; */
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .content{
+        margin-left: 0px;
+    }
 </style>
 <body>
-    <div class="contenedor">
+     <div class="contenedor">
+        <input type="checkbox" name="saasasasaa" id="toogle">
         <div class="sideBar">
             <a href="#opc1" id="opc1">Opcion1</a>
             <a href="#opc2" id="opc2">Opcion2</a>
@@ -89,7 +100,7 @@
             <a href="#opc4" id="opc4">Opcion4</a>
         </div>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet.</p>

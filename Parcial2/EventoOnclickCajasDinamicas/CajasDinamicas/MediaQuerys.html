@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="MediaQuery.css">
+</head>
+<body>
+    <div class="contenedor">
+        <p>Comportamiento de las cajas dependiendo del ancho de la pagina</p>
+        <div id="caja1" onclick="alert('Buenas buenas yo soy el boton 1')" class="caja">caja 1</div>
+        <div id="caja2" class="caja">caja 2</div>
+        <div id="caja3" class="caja">caja 3</div>
+        <div id="caja4" class="caja">caja 4</div>
+        <div id="caja5" class="caja">caja 5</div>
+        <div id="caja6" class="caja">caja 6</div>
+    </div>
+    <script>
+        //en las pripiedades del elemento en el DOM
+        document.getElementById('caja2').onclick=function(){alert('Enunciado de la segunda caja')}
+        //
+        document.querySelector('#caja3').addEventListener("click",miFuncion1);
+        function miFuncion1()
+        {
+            alert('enunciado de la caja 3');
+        }
+    </script>
+</body>
+</html>
