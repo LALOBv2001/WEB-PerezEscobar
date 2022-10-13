@@ -68,11 +68,11 @@
     elem.addEventListener("click",CambiarCaja);
     function CambiarCaja(evento){
         console.log(evento);
-        if (document.getElementById(evento.target.id).classList.contains('caja')) {
+        if (document.getElementById(evento.target.id).classList.contains("caja")) {
             document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
         }
-        if (evento.target.id=='caja9') {
-            elem.removeEventListener('click',CambiarCaja);
+        if (evento.target.id=="caja7") {
+            elem.removeEventListener("click",CambiarCaja);
         }
     }
 </script>
