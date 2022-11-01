@@ -7,13 +7,19 @@
     <title>Mi Documento Fetch</title>
 </head>
 <body>
-    <button id="btnPeticion"> Peticion    </button>
+    <button id="btnPeticion"> Peticion </button>
+    <button id="btnPeticionAsyncAwait"> Peticion Async Await </button>
     <div id="caja"></div>
     <script>
         document.getElementById("btnPeticion").addEventListener("click",function (){
             fetch("https://api.chucknorris.io/jokes/random")
             .then(respuesta=>respuesta.json())
              .then(datoJson=>document.getElementById("caja").innerText=datoJson.value);
+        })
+        document.getElementById("btnPeticionAsyncAwait").addEventListener("click", async function(){
+            let respuesta= await fetch("https://api.chucknorris.io/jokes/random");
+            let datoJason=await respuesta.json();
+            document.getElementById("caja").innerHTML=datoJason.value;
         })
     
     </script>
