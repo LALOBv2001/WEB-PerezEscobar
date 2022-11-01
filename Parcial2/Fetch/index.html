@@ -16,10 +16,10 @@
             .then(respuesta=>respuesta.json())
              .then(datoJson=>document.getElementById("caja").innerText=datoJson.value);
         })
-        document.getElementById("btnPeticionAsyncAwait").addEventListener("click", async function(){
-            let respuesta= await fetch("https://api.chucknorris.io/jokes/random");
-            let datoJason=await respuesta.json();
-            document.getElementById("caja").innerHTML=datoJason.value;
+        document.getElementById("btnPeticionAsyncAwait").addEventListener("click", async function(){//Metele a al elemento un evento click con un metodo asincrono
+            let respuesta= await fetch("https://api.chucknorris.io/jokes/random");//Aqui le decimos que se espere hasta que me traiga este dato dela API de chuck norris
+            let datoJason=await respuesta.json();//Espera la respuesta de arriba y la pasas a Json y a mi variable datoJason
+            document.getElementById("caja").innerHTML=datoJason.value;//lo que haya agarrado el datoJson metelo a mi HTML
         })
     
     </script>
