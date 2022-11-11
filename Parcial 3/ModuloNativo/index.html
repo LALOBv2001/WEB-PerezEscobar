@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Parcial 3/Modulos/modulo.js"></script>
+</head>
+<body>
+    <label for="cad">cadena</label>
+    <input type="text" id="cad">
+    <button id="btn">Aceptar</button><br>
+    <input type="text" name="" id="cadMay" disiable> <br>
+    <input type="text" name="" id="cadL" disiable>
+</body>
+<script type="module">
+    // Para importar todo tip de funciones es asi
+    import * as funciones from "./modulo.js";
+        document.getElementById("btn").addEventListener("click",function(){
+        let valor=document.getElementById("cad").value;
+        let valorM= funciones.mayusculas(valor);
+        let valorL= funciones.longitud(valor);
+        document.getElementById("cadMay").value=valorM;
+        document.getElementById("cadL").value=valorL;
+
+    })
+</script>
+</html>
