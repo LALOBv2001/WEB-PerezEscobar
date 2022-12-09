@@ -5,5 +5,5 @@ document.getElementById('btnActualizar').addEventListener('click',async()=>{
         method:'POST',
         body:form
     })
-
+console.log('reliazado con exito');
 })

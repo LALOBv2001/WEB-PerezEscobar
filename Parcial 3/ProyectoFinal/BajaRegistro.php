@@ -1,21 +1,15 @@
 <?php
 //echo $id;
-$id = $_POST['NIP'];
+$NombrePiloto = $_POST['NombrePiloto'];
 
-$servidor="localhost";
-$basedatos="registrodatos";
-$usuario="root";
-$password="";
+$servidor='localhost';
+$basedatos='BaseWebVuelo';
+$usuario='root';
+$password='';
+$port='3306';
 
-$con = mysqli_connect($servidor,$usuario,$password,$basedatos) or die ("No se puede conectar");
-$consulta = "DELETE FROM registro WHERE NIP LIKE $id";
-$registros= mysqli_query($con,$consulta) or die("Problemas al traer los datos");
+$con = mysqli_connect($servidor, $usuario, $password, $basedatos,$port) or die("No se puede conectar");
+$consulta = "delete from vuelo where NombrePiloto ='$NombrePiloto'";
+$registros = mysqli_query($con, $consulta) or die("Problemas al traer los datos");
 
-
-
-if ($registros) {
-    header("Location:Formulario.html");
-}
-else {
-    echo "Faltan datos";
-}
+?>
