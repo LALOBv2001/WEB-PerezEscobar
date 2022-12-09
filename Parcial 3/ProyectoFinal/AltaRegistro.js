@@ -6,9 +6,4 @@ document.getElementById('btnGetReg').addEventListener('click',async ()=>{
         body:form,
         
     })
-    // res.status==200?
-    // swal('Empleado añadido con éxito!','','success')
-    // :
-    // swal('No se pudo añadir el empleado','','error')
-    // document.getElementById('formulario').reset()
 })

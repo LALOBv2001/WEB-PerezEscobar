@@ -1,26 +1,22 @@
-document.getElementById('btnConsultar').addEventListener('click',async(e)=>{//BOTON
+document.getElementById('btnConsultar').addEventListener('click',async(e)=>{
     e.preventDefault()
-    const form = new FormData(document.getElementById('formulario'))//FORMULARIO
-    const results = await fetch('./Consulta.php',{
+    const form= new FormData(document.getElementById('formulario'))
+    //console.log(form.get('Nombre-Emp'))
+     const res=await fetch('./Consulta.php',{
         method:'POST',
-        body: form
-    })
-    // results.status==200?
-    // swal('Viaje encontrado!','','success')
-    // :
-    // swal('No se encontró el viaje','','error')
-    let data= await results.json()
-    
-        $("#NombrePiloto").val(data.NombrePiloto)
-        $('#NombreCopiloto').val(data.NombreCopiloto)
-        $('#CapacidadPasajeros').val(data.CapacidadPasajeros)
-        $('#CapacidadGalonesCombustible').val(data.CapacidadGalonesCombustible)
-        $('#PaisDespegue').val(data.PaisDespegue)
-        $('#PaisAterrizaje').val(data.PaisAterrizaje)
-        $('#CostoBoleto').val(data.CostoBoleto)
-        $('#CapacidadEquipajePasajero').val(data.CapacidadEquipajePasajero)
-        $('#DuracionVueloHoras').val(data.DuracionVueloHoras)
+        body:form,
         
-        $('#exampleModal').modal('hide')
+    })
+    let data = await res.json()
+    // console.log(data);
+    document.getElementById('NombrePiloto').value = data.NombrePiloto
+    document.getElementById('NombreCopiloto').value = data.NombreCopiloto
+    document.getElementById('CapacidadPasajeros').value = data.CapacidadPasajeros
+    document.getElementById('CapacidadGalonesCombustible').value = data.CapacidadGalonesCombustible
+    document.getElementById('PaisDespegue').value = data.PaisDespegue
+    document.getElementById('PaisAterrizaje').value = data.PaisAterrizaje
+    document.getElementById('CostoBoleto').value = data.CostoBoleto
+    document.getElementById('CapacidadEquipajePasajero').value = data.CapacidadEquipajePasajero
+    document.getElementById('DuracionVueloHoras').value = data.DuracionVueloHoras
 
 })
