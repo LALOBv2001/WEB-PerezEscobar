@@ -5,5 +5,5 @@ document.getElementById('btnEliminar').addEventListener('click',async ()=>{
         method:'POST',
         body: form
     })
-  console.log('Eeliminacion realizada')
+   
 })
